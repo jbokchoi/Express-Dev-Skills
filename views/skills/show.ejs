@@ -11,6 +11,10 @@
         <h1>Skill #<%= skillNum %></h1>
         <h3><%= skill.skill %></h3>
         <h3>Sample Included: <%= skill.sample ? 'Yes' : 'No' %></h3>
+        <form action="/skills/<%= skillId %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">X</button>
+        </form>
         <a href="/skills/<%= skillNum -1 %>/edit">EDIT SKILL</a>
         <a href="/skills">RETURN TO SKILLS LIST</a>
     </body>

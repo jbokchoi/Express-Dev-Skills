@@ -43,7 +43,8 @@ function show(req, res) {
     console.log(Skill.getOne(req.params.id));
     res.render('skills/show', {
         skill: Skill.getOne(req.params.id),
-        skillNum: parseInt(req.params.id) + 1
+        skillNum: parseInt(req.params.id) + 1,
+        skillId: req.params.id
     });
 }
 
